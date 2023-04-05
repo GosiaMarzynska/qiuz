@@ -1,7 +1,7 @@
 .card {
 	display: block;
 	margin: auto;
- margin-top: 10rem;
+	margin-top: 10rem;
 	padding: 2rem 4rem;
 	width: 30rem;
 	border-radius: 20px;
@@ -19,27 +19,61 @@
 	font-weight: bold;
 }
 
-.form label {
+/* .form label {
 	display: block;
 	margin-bottom: 0.05rem;
 	color: #1e383b;
 	font-weight: bold;
+} */
+.radio {
+	display: inline-flex;
+	margin: 0 1rem 1rem 1rem;
+	overflow: hidden;
+	border-radius: 20px;
+    font-weight: bold
+
+}
+.radio-input {
+	display: none;
 }
 
-.form input { 
+.radio-label{
+    padding: 10px 20px;
+    background-color:#245c55;
+    font-size: 18px;
+    color: #ffffff;
+    cursor:pointer;
+    transition: background-color 0.2s;
+}
 
+
+.radio-label:not(:last-of-type){
+ border-right: 1px solid #193f3b;
+}
+
+.radio-input:checked + .radio-label{
+    background-color: #193f3b;
+}
+
+.label {
+    font-weight: bold;
+}
+.form-input {
 	display: block;
 	width: 100%;
 	font: inherit;
+    font-size: 18px;
+    font-weight: bold;
 	padding: 0.5rem;
-	border-radius: 6px;
+    padding-left: 1.5rem;
+	border-radius: 20px;
 	border: none;
 	background-color: #c2c2c2;
 	color: #000000;
-  transition: background-color 0.3s;
+	transition: background-color 0.3s;
 }
-.form input:hover { 
-  background-color: #e7e7e7;
+.form-input:hover {
+	background-color: #e7e7e7;
 }
 
 .actions {
@@ -56,13 +90,12 @@
 	font: inherit;
 	padding: 0.5rem 1.5rem;
 	border: none;
-	border-radius: 4px;
-	background-color: #307c73;
+	border-radius: 20px;
+	background-color: #245c55;
 	color: #ffffff;
-  transition: background-color 0.3s;
+	transition: background-color 0.3s;
 }
 
 .actions button:hover {
-	background-color: #245c55;
-
+	background-color: #193f3b;
 }
