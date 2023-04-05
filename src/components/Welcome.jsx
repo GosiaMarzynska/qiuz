@@ -1,9 +1,15 @@
+import React, { useContext, useRef } from 'react';
+import { AuthContext } from '../context/auth-context';
 import classes from './Welcome.module.css';
 
 export default function Welcome() {
-	const submitHandler = (event) => {
-        event.preventDefault();
-    };
+	const authContext = useContext(AuthContext);
+    const nameRef = useRef();
+
+	const submitHandler = event => {
+		event.preventDefault();
+		authContext.login(nameRef.current.value);
+	};
 
 	return (
 		<div className={classes.card}>
@@ -11,10 +17,10 @@ export default function Welcome() {
 			<form onSubmit={submitHandler} className={classes.form}>
 				<p>
 					<label htmlFor='name'>Please enter your name</label>
-					<input type='text' id='name' name='name' required />
+					<input type='text' id='name' name='name' ref={nameRef} required />
 				</p>
 				<div className={classes.actions}>
-					<button>OK</button>
+					<button type="submit">OK</button>
 				</div>
 			</form>
 		</div>
