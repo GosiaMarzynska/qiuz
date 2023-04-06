@@ -1,6 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { AuthContext } from '../context/auth-context';
 import classes from './Welcome.module.css';
+import Card from '../UI/Card';
 
 export default function Welcome() {
 	const authContext = useContext(AuthContext);
@@ -12,7 +13,7 @@ export default function Welcome() {
 	};
 
 	return (
-		<div className={classes.card}>
+		<Card>
 			<h2 className={classes.title}>Welcome to quiz game!</h2>
 			<form onSubmit={submitHandler} className={classes.form}>
 				<p>
@@ -23,6 +24,6 @@ export default function Welcome() {
 					<button type="submit">OK</button>
 				</div>
 			</form>
-		</div>
+		</Card>
 	);
 }
