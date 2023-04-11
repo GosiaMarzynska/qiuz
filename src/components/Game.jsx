@@ -1,41 +1,50 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Question from './Question';
 import Card from '../UI/Card';
 
-export default function Game({questions}) {
-	const [correctAnswersList, setCorrectAnswersList] = useState([])
+const Game = React.memo(({ questions }) => {
+	const [correctAnswersList, setCorrectAnswersList] = useState([]);
+	const [currentQ, setCurrentQ] = useState(0);
+	console.log('Game rendered');
 
-    useEffect (()=> {
-        questions.map((question, index) =>
-            setCorrectAnswersList(prev => [...prev, {index:index, correctA:question.correctAnswer}])
-            );
-            
-            console.log('POPRAWNE ODPOWIEDZI');
-            console.log(correctAnswersList);
-    }, [])
+	useEffect(() => {
+		const correctAnswers = questions.map(question => question.correctAnswer);
+		setCorrectAnswersList(correctAnswers);
+		console.log(`Poprawne odpowiedzi to ${[...correctAnswers]}`);
+	}, [questions]);
 
-	const questionsList = questions.map((question, index) => (
+	const nextButtonHandler = () => {
+		setCurrentQ(prev => prev + 1);
+	};
+
+	// const questionsList = questions.map((question, index) => (
+	// 	<Question
+	// 		key={'Q' + index}
+	// 		qNumber={index}
+	// 		question={question.question}
+	// 		correctA={question.correctAnswer}
+	// 		incorrectA={question.incorrectAnswers}
+	// 		onNextButtonClicked={nextButtonHandler}
+	// 	/>
+	// ));
+
+	const currentQuestion = (
 		<Question
-			key={'Q' + index}
-			qNumber={'Q' + index}
-			question={question.question}
-			correctA={question.correctAnswer}
-			incorrectA={question.incorrectAnswers}
+			key={'Q' + currentQ}
+			qNumber={currentQ}
+			question={questions[currentQ].question}
+			correctA={questions[currentQ].correctAnswer}
+			incorrectA={questions[currentQ].incorrectAnswers}
+			onNextButtonClicked={nextButtonHandler}
 		/>
-	));
-
-    const submitHandler= (event ) =>{
-        event.preventDefault();
-      }
-	return (
-		<Card>
-            <form onSubmit={submitHandler}>
-			<p>{questionsList}</p>
-<div className={styles.action}>
-    <button>Submit</button>
-</div>
-
-            </form>
-		</Card>
 	);
-}
+
+	const submitHandler = event => {
+		event.preventDefault();
+		console.log(event.current.value);
+	};
+
+	return <Card>{currentQuestion}</Card>;
+});
+
+export default Game;

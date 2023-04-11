@@ -3,13 +3,12 @@ import { AuthContext } from '../context/auth-context';
 import classes from './StartGame.module.css';
 import Card from '../UI/Card';
 
-export default function StartGame({onRadioChange, onQuestionsAmountChange, difficulty, prepareGame}) {
+const StartGame = React.memo(({onRadioChange, onQuestionsAmountChange, prepareGame}) =>{
 	const authContext = useContext(AuthContext);
 
 
 	const name = authContext.name;
 
-    // const isRadioSelect = (selectDifficulty) => selectDifficulty === difficulty;
 
 
 
@@ -51,3 +50,6 @@ export default function StartGame({onRadioChange, onQuestionsAmountChange, diffi
 		</Card>
 	);
 }
+)
+
+export default StartGame;
