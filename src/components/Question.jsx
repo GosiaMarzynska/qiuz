@@ -26,7 +26,7 @@ const Question= React.memo(({ question, correctA, incorrectA, qNumber, onNextBut
 	const submitHandler =( event) => {
 		event.preventDefault();
 		if(userA === correctA){
-			dispatch(counterActions.icrement)
+			dispatch(counterActions.increment())
 		}
 		onNextButtonClicked()
 	}

@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from './context/auth-context';
+import { useDispatch } from 'react-redux';
+import { counterActions} from './store/gameCounter'
 import Welcome from './components/Welcome';
 import StartGame from './components/StartGame';
 import Game from './components/Game';
@@ -12,6 +14,7 @@ function App() {
 	const [isGameSet, setIsGameSet] = useState(false);
 	const [questions, setQuestions] = useState(null);
 	const [url, setUrl] = useState('');
+	const dispatch = useDispatch();
 
 	const radioClickHandler = event => {
 		setDifficulty(event.currentTarget.value);
@@ -21,6 +24,11 @@ function App() {
 		setQuestionsAmount(event.currentTarget.value);
 	};
 
+
+	const cleaner = () => {
+		setIsGameSet(false)
+		dispatch(counterActions.cleaner())
+	}
 	
 	useEffect(() => {
 		if(isGameSet){
@@ -53,7 +61,7 @@ function App() {
 	}
 
 	if (authContext.isAuth && isGameSet && questions) {
-		content = <Game questions={questions} />;
+		content = <Game questions={questions} cleaner={cleaner}/>;
 	}
 
 	return <div className='App'>{content}</div>;

@@ -3,8 +3,8 @@ import gameReducer from './gameCounter'
 
 const store = configureStore({
 	reducer: {
-		game: gameReducer,
-	},
+		counter: gameReducer,
+		},
 });
 
 export default store;
