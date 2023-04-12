@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import React, { useContext } from 'react';
 import { AuthContext } from '../context/auth-context';
 import styles from './Result.module.css';
+import Card from '../UI/Card';
 
 export default function Result({ questionsAmount, cleaner }) {
 	const counter = useSelector(state => state.counter.counter);
@@ -29,12 +30,12 @@ const clickHandler= () => {
 }
 
 	return (
-		<div>
+		<Card>
 			<p className={styles.title}>{verdict()}</p>
 			<p className={styles.result}>
 				Twój wynik to {counter}/{questionsAmount}
 			</p>
 			<button onClick={clickHandler} className={styles.button}>Try Again?</button>
-		</div>
+		</Card>
 	);
 }

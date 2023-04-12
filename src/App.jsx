@@ -27,7 +27,7 @@ function App() {
 
 	const cleaner = () => {
 		setIsGameSet(false)
-		dispatch(counterActions.cleaner())
+		dispatch(counterActions.clean())
 	}
 	
 	useEffect(() => {

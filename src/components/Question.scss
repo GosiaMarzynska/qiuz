@@ -3,7 +3,19 @@ $color2: #1f523e;
 
 .question{
     padding-top: 2rem;
+	transition: all 1s ease-out;;
+}
 
+
+.QuestionShown {
+	animation: showQuestion 0.4s ease-out forwards;
+	visibility: visible;
+}
+
+.QuestionHidden {
+	animation: hideQuestion 0.4s ease-out  forwards;
+	visibility: hidden;
+	
 }
 
 .radio {
@@ -53,5 +65,53 @@ $color2: #1f523e;
 				}
 			}
 		}
+	}
+}
+
+.button{
+	cursor: pointer;
+	font: inherit;
+	margin-top: 1.5rem;
+	padding: 0.5rem 1.5rem;
+	border: none;
+	border-radius: 20px;
+	font-size: 1.5rem;
+	background-color: #245c55;
+	color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+	background-color: #193f3b;
+
+}
+
+@keyframes showQuestion {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+	50% {
+		opacity: 0.5;
+		transform: translateX(-50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes hideQuestion {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	50% {
+		opacity: 0.5;
+		transform: translateX(50%);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(100%);
 	}
 }
