@@ -1,13 +1,27 @@
-.card{
-    display: block;
-    border-radius: 12px;    
-    margin: auto;
-    width: 40rem;
-    margin-top: 10rem;
-    padding: 2rem 4rem;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-    background-color: white;
-    opacity: 0.9;
-    
+.card {
+	display: block;
+	border-radius: 12px;
+	margin: auto;
+	width: 40rem;
+	margin-top: 10rem;
+	padding: 2rem 4rem;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+	background-color: white;
+	opacity: 0.9;
+}
 
+/* MEDIA */
+
+@media (max-width: 768px) {
+	.card {
+		width: 33rem;
+        padding: 1.8rem 3.5rem;
+	}
+}
+
+@media (max-width: 576px) {
+    .card {
+		width: 20rem;
+        padding: 1rem 2rem 2rem;
+	}
 }

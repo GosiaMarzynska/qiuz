@@ -8,12 +8,12 @@ $color2: #1f523e;
 
 
 .QuestionShown {
-	animation: showQuestion 0.4s ease-out forwards;
+	animation: showQuestion 0.3s ease-out forwards;
 	visibility: visible;
 }
 
 .QuestionHidden {
-	animation: hideQuestion 0.4s ease-out  forwards;
+	animation: hideQuestion 0.3s ease-out  forwards;
 	visibility: hidden;
 	
 }
@@ -92,7 +92,7 @@ $color2: #1f523e;
 		transform: translateX(-100%);
 	}
 	50% {
-		opacity: 0.5;
+		opacity: 0.3;
 		transform: translateX(-50%);
 	}
 	100% {
@@ -107,7 +107,7 @@ $color2: #1f523e;
 		transform: translateX(0);
 	}
 	50% {
-		opacity: 0.5;
+		opacity: 0.3;
 		transform: translateX(50%);
 	}
 	100% {
@@ -115,3 +115,5 @@ $color2: #1f523e;
 		transform: translateX(100%);
 	}
 }
+
+

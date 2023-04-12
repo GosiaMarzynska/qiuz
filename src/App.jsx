@@ -28,6 +28,7 @@ function App() {
 	const cleaner = () => {
 		setIsGameSet(false)
 		dispatch(counterActions.clean())
+		setQuestions(null)
 	}
 	
 	useEffect(() => {

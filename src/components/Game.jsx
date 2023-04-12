@@ -13,11 +13,11 @@ const Game = React.memo(({ questions, cleaner }) => {
 		setIsShown(false)
 		setTimeout(() => {
 			setCurrentQ(prev => prev + 1);
-		}, 600);
+		}, 400);
 		setTimeout(() => {
 			setIsShown(true);
 		
-		}, 1000);
+		}, 800);
 	};
 
 	const currentQuestion = () => {

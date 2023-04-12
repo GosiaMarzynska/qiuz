@@ -34,8 +34,8 @@ const Question = React.memo(({ question, correctA, incorrectA, qNumber, onNextBu
 	};
 
 	const animationTiming = {
-		enter: 400,
-		exit: 400,
+		enter: 300,
+		exit: 300,
 	};
 
 	return (
