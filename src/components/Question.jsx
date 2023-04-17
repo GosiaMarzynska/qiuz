@@ -10,7 +10,7 @@ const Question = React.memo(({ question, correctA, incorrectA, qNumber, onNextBu
 	const dispatch = useDispatch();
 	let answersArray = incorrectA.concat(correctA);
 	answersArray.sort();
-	console.log(answersArray);
+	
 
 	const checkAnswerHandler = event => {
 		setUserA(event.currentTarget.value);

@@ -1,9 +1,12 @@
 .card {
 	display: block;
-	border-radius: 12px;
-	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
 	width: 40rem;
-	margin-top: 10rem;
+	border-radius: 12px;
 	padding: 2rem 4rem;
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 	background-color: white;
@@ -15,13 +18,13 @@
 @media (max-width: 768px) {
 	.card {
 		width: 33rem;
-        padding: 1.8rem 3.5rem;
+		padding: 1.8rem 3.5rem;
 	}
 }
 
 @media (max-width: 576px) {
-    .card {
+	.card {
 		width: 20rem;
-        padding: 1rem 2rem 2rem;
+		padding: 1rem 2rem 2rem;
 	}
 }

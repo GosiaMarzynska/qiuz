@@ -1,21 +1,23 @@
 $color1: #f4f4f4;
 $color2: #1f523e;
 
-.question{
-    padding-top: 2rem;
-	transition: all 1s ease-out;;
+.question {
+	padding-top: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: all 1s ease-out;
 }
-
 
 .QuestionShown {
 	animation: showQuestion 0.3s ease-out forwards;
-	visibility: visible;
+	visibility: hidden;
 }
 
 .QuestionHidden {
-	animation: hideQuestion 0.3s ease-out  forwards;
+	animation: hideQuestion 0.3s ease-out forwards;
 	visibility: hidden;
-	
 }
 
 .radio {
@@ -68,7 +70,7 @@ $color2: #1f523e;
 	}
 }
 
-.button{
+.button {
 	cursor: pointer;
 	font: inherit;
 	margin-top: 1.5rem;
@@ -78,42 +80,39 @@ $color2: #1f523e;
 	font-size: 1.5rem;
 	background-color: #245c55;
 	color: #ffffff;
-  transition: background-color 0.3s;
+	transition: background-color 0.3s;
 }
 
 .button:hover {
 	background-color: #193f3b;
-
 }
 
 @keyframes showQuestion {
 	0% {
 		opacity: 0;
-		transform: translateX(-100%);
+		left:-100%;
 	}
 	50% {
 		opacity: 0.3;
-		transform: translateX(-50%);
+		left:-50%;
 	}
 	100% {
 		opacity: 1;
-		transform: translateX(0);
+		left:50%;
 	}
 }
 
 @keyframes hideQuestion {
 	0% {
 		opacity: 1;
-		transform: translateX(0);
+		left:50%;
 	}
 	50% {
 		opacity: 0.3;
-		transform: translateX(50%);
+		left: 100%;
 	}
 	100% {
 		opacity: 0;
-		transform: translateX(100%);
+		left: 150%;
 	}
 }
-
-

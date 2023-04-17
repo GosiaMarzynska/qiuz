@@ -6,17 +6,15 @@ import Result from './Result';
 const Game = React.memo(({ questions, cleaner }) => {
 	const [currentQ, setCurrentQ] = useState(0);
 	const [isShown, setIsShown] = useState(true);
-	console.log('Game rendered');
 	const questionsAmount = questions.length;
 
 	const nextButtonHandler = () => {
-		setIsShown(false)
+		setIsShown(false);
 		setTimeout(() => {
 			setCurrentQ(prev => prev + 1);
 		}, 400);
 		setTimeout(() => {
 			setIsShown(true);
-		
 		}, 800);
 	};
 
