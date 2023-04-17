@@ -15,7 +15,7 @@ const StartGame = React.memo(({onRadioChange, onQuestionsAmountChange, prepareGa
 
 	return (
 		<Card>
-			<h2 className={classes.title}>{name ? name : 'User'}!</h2>
+			<h2 className={classes.title}>Hi {name ? name : 'User'}!</h2>
 			<p className={classes.message}>Your game will be ready soon!</p>
       
 			<form onSubmit={prepareGame} className={classes.form}>

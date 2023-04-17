@@ -2,6 +2,7 @@ import React, { useContext, useRef } from 'react';
 import { AuthContext } from '../context/auth-context';
 import classes from './Welcome.module.css';
 import Card from '../UI/Card';
+import bulbIcon from '../assets/bulbIcon.svg'
 
 export default function Welcome() {
 	const authContext = useContext(AuthContext);
@@ -14,7 +15,7 @@ export default function Welcome() {
 
 	return (
 		<Card>
-			<h2 className={classes.title}>Welcome to quiz game!</h2>
+			<h1 className={classes.title}>Welcome to Quiz<img src={bulbIcon}/>Game!</h1>
 			<form onSubmit={submitHandler} className={classes.form}>
 				<p>
 					<label htmlFor='name'>Please enter your name</label>

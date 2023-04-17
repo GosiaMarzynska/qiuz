@@ -1,28 +1,16 @@
-.card {
-	display: block;
-	margin: auto;
-	margin-top: 10rem;
-	padding: 2rem 4rem;
-	width: 30rem;
-	border-radius: 20px;
-
-	background-color: #ffffff;
-	-webkit-box-shadow: 8px 8px 24px 0px rgba(61, 72, 67, 1);
-	-moz-box-shadow: 8px 8px 24px 0px rgba(61, 72, 67, 1);
-	box-shadow: 8px 8px 24px 0px rgba(61, 72, 67, 1);
-	opacity: 0.9;
+img {
+	height: 30px;
 }
-
 .title {
 	color: rgb(0, 0, 0);
-	display: block;
-	font-weight: bold;
+	line-height: 150%;
 }
 
 .form label {
 	display: block;
-	margin-bottom: 0.05rem;
-	color: #1e383b;
+	margin-bottom: 0.5rem;
+	font-size: 1.1rem;
+	color: #16292c;
 	font-weight: bold;
 }
 
