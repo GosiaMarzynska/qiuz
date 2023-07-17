@@ -57,6 +57,7 @@ function App() {
 				onQuestionsAmountChange={questionsAmountHandler}
 				difficulty={difficulty}
 				prepareGame={submitHandler}
+				questionsAmount={questionsAmount}
 			/>
 		);
 	}
@@ -65,7 +66,7 @@ function App() {
 		content = <Game questions={questions} cleaner={cleaner}/>;
 	}
 
-	return <div className='App'>{content}</div>;
+	return <div className='app'>{content}</div>;
 }
 
 export default App;

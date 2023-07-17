@@ -28,7 +28,6 @@ export default function Result({ questionsAmount, cleaner }) {
 const clickHandler= () => {
     cleaner()
 }
-
 	return (
 		<Card>
 			<p className={styles.title}>{verdict()}</p>

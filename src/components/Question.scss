@@ -8,7 +8,7 @@ $color2: #1f523e;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	transition: all 1s ease-out;
-}
+	}
 
 .QuestionShown {
 	animation: showQuestion 0.3s ease-out forwards;
@@ -90,22 +90,22 @@ $color2: #1f523e;
 @keyframes showQuestion {
 	0% {
 		opacity: 0;
-		left:-100%;
+		left: -100%;
 	}
 	50% {
 		opacity: 0.3;
-		left:-50%;
+		left: -50%;
 	}
 	100% {
 		opacity: 1;
-		left:50%;
+		left: 50%;
 	}
 }
 
 @keyframes hideQuestion {
 	0% {
 		opacity: 1;
-		left:50%;
+		left: 50%;
 	}
 	50% {
 		opacity: 0.3;

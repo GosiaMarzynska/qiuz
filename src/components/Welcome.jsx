@@ -15,7 +15,7 @@ export default function Welcome() {
 
 	return (
 		<Card>
-			<h1 className={classes.title}>Welcome to Quiz<img src={bulbIcon}/>Game!</h1>
+			<h1 className={classes.title}>Welcome to Quiz<img src={bulbIcon} alt=''/>Game!</h1>
 			<form onSubmit={submitHandler} className={classes.form}>
 				<p>
 					<label htmlFor='name'>Please enter your name</label>

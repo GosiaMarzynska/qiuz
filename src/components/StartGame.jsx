@@ -3,7 +3,7 @@ import { AuthContext } from '../context/auth-context';
 import classes from './StartGame.module.css';
 import Card from '../UI/Card';
 
-const StartGame = React.memo(({onRadioChange, onQuestionsAmountChange, prepareGame}) =>{
+const StartGame = React.memo(({onRadioChange, onQuestionsAmountChange, prepareGame, questionsAmount}) =>{
 	const authContext = useContext(AuthContext);
 
 
@@ -41,7 +41,7 @@ const StartGame = React.memo(({onRadioChange, onQuestionsAmountChange, prepareGa
                 </div>
 				<p>
 					<label className={classes.label} htmlFor='questionsAmount'>How many questions?</label>
-					<input className={classes['form-input']}type='number' id='questionsAmount' name='questionsAmount' min='1' max='20' defaultValue='5' onChange={onQuestionsAmountChange}/>
+					<input className={classes['form-input']}type='number' id='questionsAmount' name='questionsAmount' min='1' max='20' defaultValue={questionsAmount ? questionsAmount : 5} onChange={onQuestionsAmountChange}/>
 				</p>
 				<div className={classes.actions}>
 					<button type='submit'>Start Game</button>
