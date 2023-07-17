@@ -1,7 +1,7 @@
 # 💡Quiz Game
 
 ## Try me
-#### [myawesomequizgame.netlify.app](myawesomequizgame.netlify.app)
+#### [myawesomequizgame.netlify.app](https://myawesomequizgame.netlify.app/)
 
 ## About
 It's a fun quiz game allowing you to test your general knoledge. Each game has quick setup with adjustable difficulty level and number of questions. All servered in simple and pleasant UI. Quiz questions across a range of categories are taken from [The Trivia API](https://the-trivia-api.com/).
