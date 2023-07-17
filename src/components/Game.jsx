@@ -34,7 +34,7 @@ const Game = React.memo(({ questions, cleaner }) => {
 	};
 	return (
 		<>
-			{currentQ < questionsAmount ? currentQuestion() : <Result questionsAmount={questionsAmount} cleaner={cleaner} />};
+			{currentQ < questionsAmount ? currentQuestion() : <Result questionsAmount={questionsAmount} cleaner={cleaner} />}
 		</>
 	);
 });

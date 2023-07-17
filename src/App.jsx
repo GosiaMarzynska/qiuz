@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from './context/auth-context';
 import { useDispatch } from 'react-redux';
-import { counterActions} from './store/gameCounter'
+import { counterActions } from './store/gameCounter';
 import Welcome from './components/Welcome';
 import StartGame from './components/StartGame';
 import Game from './components/Game';
-
 
 function App() {
 	const authContext = useContext(AuthContext);
@@ -24,18 +23,17 @@ function App() {
 		setQuestionsAmount(event.currentTarget.value);
 	};
 
-
 	const cleaner = () => {
-		setIsGameSet(false)
-		dispatch(counterActions.clean())
-		setQuestions(null)
-	}
-	
+		setIsGameSet(false);
+		dispatch(counterActions.clean());
+		setQuestions(null);
+	};
+
 	useEffect(() => {
-		if(isGameSet){
+		if (isGameSet) {
 			fetch(url)
-			.then(res => res.json())
-			.then(data => setQuestions(data))
+				.then(res => res.json())
+				.then(data => setQuestions(data));
 		}
 	}, [url, isGameSet]);
 
@@ -63,7 +61,7 @@ function App() {
 	}
 
 	if (authContext.isAuth && isGameSet && questions) {
-		content = <Game questions={questions} cleaner={cleaner}/>;
+		content = <Game questions={questions} cleaner={cleaner} />;
 	}
 
 	return <div className='app'>{content}</div>;

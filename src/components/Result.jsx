@@ -21,7 +21,7 @@ export default function Result({ questionsAmount, cleaner }) {
 			case 0.5 >= result && result > 0.25:
 				return `${name}, you need to practice more!`;
 			case result <= 0.25:
-				return `${name}, not very well. Mayby try again?`;
+				return `${name}, you could do better! Mayby try again?`;
 		}
 	};
 
@@ -32,7 +32,7 @@ const clickHandler= () => {
 		<Card>
 			<p className={styles.title}>{verdict()}</p>
 			<p className={styles.result}>
-				Twój wynik to {counter}/{questionsAmount}
+				Your score: {counter}/{questionsAmount}
 			</p>
 			<button onClick={clickHandler} className={styles.button}>Try Again?</button>
 		</Card>

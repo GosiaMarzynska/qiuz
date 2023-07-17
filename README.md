@@ -29,7 +29,11 @@ Quiz Game requires ViteJS to run;
 1. Clone repository
 2. Use ``npm run dev`` to run it locally
 
-
+## Screens
+ ![Start](docs/start.png)
+ ![Prepare](docs/prepare.png)
+ ![Game](docs/game.png)
+ ![Result](docs/result.png)
 
 ## License
 MIT
